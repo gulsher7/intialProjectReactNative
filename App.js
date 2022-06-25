@@ -26,7 +26,7 @@ const App = () => {
       if (!!isFirstTime) {
         actions.isFirstTime(true)
       }
-      console.log('is first time app.js', isFirstTime)
+      console.log('is first time app', isFirstTime)
     } catch (error) {
       console.log(error)
     }
