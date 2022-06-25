@@ -6,7 +6,7 @@ export default function (Stack) {
   return (
     <>
       <Stack.Screen
-        name={navigationStrings.HOME}
+        name={navigationStrings.TAB_ROUTES}
         component={TabRoutes}
         options={{ headerShown: false }}
       

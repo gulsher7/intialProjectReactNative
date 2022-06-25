@@ -1,13 +1,27 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import ButtonComp from '../../Components/ButtonComp';
+import WrapperContainer from '../../Components/WrapperContainer';
+import navigationStrings from '../../constants/navigationStrings';
+import actions from '../../redux/actions';
+
 
 // create a component
-const Login = () => {
+const Login = ({navigation}) => {
+
+    const onLogin = () =>{
+        actions.login(true)
+    }
     return (
+        <WrapperContainer>
         <View style={styles.container}>
-            <Text>Login</Text>
+            <ButtonComp 
+                btnText='Go to Home'
+                onPress={onLogin}
+            />
         </View>
+        </WrapperContainer>
     );
 };
 
@@ -15,9 +29,7 @@ const Login = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#2c3e50',
+
     },
 });
 

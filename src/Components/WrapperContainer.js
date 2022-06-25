@@ -14,7 +14,7 @@ const WrapperContainer = ({
 }) => {
   const navigation = useNavigation()
   return (
-    <View style={{ flex: 1, backgroundColor: colors.whiteColor }}>
+    <View style={{ flex: 1, backgroundColor: colors.white }}>
       <StatusBar backgroundColor={statusBarColor} barStyle={barStyle} />
       <SafeAreaView style={styles.container}>
         {children}

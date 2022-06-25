@@ -1,4 +1,5 @@
 export default {
+    TAB_ROUTES:"tabRoutes",
     ON_BOARDING: 'onBoarding',
     INITIAL_AUTH: "initialAuth",
     LOGIN: "login",

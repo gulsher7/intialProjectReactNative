@@ -1,12 +1,22 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import ButtonComp from '../../Components/ButtonComp';
+import actions from '../../redux/actions';
 
 // create a component
 const Home = () => {
+
+  const onLogout  = () =>{
+      actions.logout()
+  }
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
+     <ButtonComp 
+     btnText='LOGOUT'
+     onPress={onLogout}
+     
+     />
     </View>
   );
 };

@@ -12,19 +12,23 @@ export function signUp(data) {
 
 
 export const login = (data) => {
-  console.log(data, 'the given data')
-  return new Promise((resolve, reject) => {
-    apiPost(LOGIN_API, data)
-      .then((res) => {
-        setUserData(res.data).then((suc) => {
-          dispatch(saveUserData(res.data));
-          resolve(res);
-        });
-      })
-      .catch((error) => {
-        reject(error);
-      });
-  });
+  dispatch(saveUserData(data)); //saveUserData is a function which is define in reducer state
+  
+  // ************* uncomment below code in case of api*************** ///
+
+  // console.log(data, 'the given data')
+  // return new Promise((resolve, reject) => {
+  //   apiPost(LOGIN_API, data)
+  //     .then((res) => {
+  //       setUserData(res.data).then((suc) => {
+  //         dispatch(saveUserData(res.data));
+  //         resolve(res);
+  //       });
+  //     })
+  //     .catch((error) => {
+  //       reject(error);
+  //     });
+  // });
 };
 
 

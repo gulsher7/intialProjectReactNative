@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { moderateScale } from '../styles/responsiveSize';
 import colors from '../styles/colors';
-import fontFamily from '../styles/fontFamily';
+
 import commonStyles, { hitSlopProp } from '../styles/commonStyles';
 
 const ButtonComp = ({
@@ -25,16 +25,15 @@ const ButtonComp = ({
 };
 const styles = StyleSheet.create({
   btnStyle: {
-    backgroundColor: colors.whiteColor,
+    backgroundColor: colors.theme,
     height: moderateScale(48),
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 1.5,
-    paddingHorizontal: moderateScale(8)
+    paddingHorizontal: moderateScale(8),
   },
   btnTextStyle: {
-    ...commonStyles.fontSize26,
-    fontFamily: fontFamily.medium,
+    // ...commonStyles.fontSize26,
     textTransform:'uppercase'
   },
 });

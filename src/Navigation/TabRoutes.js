@@ -25,13 +25,14 @@ const TabRoutes = (props) => {
                 </>
             )}
             initialRouteName={navigationStrings.HOME}
-            tabBarOptions={{
+
+            screenOptions={{
+                headerShown: false,
                 style: styles.customBottomtabsStyle,
-                activeTintColor: colors.blackColor,
-                inactiveTintColor: 'gray',
-                showLabel: false
+                tabBarActiveTintColor: colors.blackColor,
+                tabBarInactiveTintColor: 'gray',
+                // tabBarShowLabel: false
             }}
-            screenOptions={{headerShown:false}}
 
         >
             <BottomTab.Screen
